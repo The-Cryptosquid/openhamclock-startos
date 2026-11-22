@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icon.png" alt="OpenHamClock Logo" width="21%">
+  <img src=".github/social-preview.png" alt="OpenHamClock on StartOS" width="100%">
 </p>
 
 # OpenHamClock on StartOS
