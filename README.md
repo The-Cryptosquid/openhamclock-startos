@@ -11,6 +11,14 @@
 
 [OpenHamClock](https://github.com/accius/openhamclock) is a real-time amateur radio dashboard (space weather, band predictions, DX and RBN spots, POTA/SOTA, satellites, weather) written in Node.js and React. This package runs it as a single-station, self-hosted instance behind a StartOS password gate.
 
+Upstream also runs a public instance at openhamclock.com, with the same panels and data sources. The self-hosted instance differs from it in five ways:
+
+- **Logging software reports to it directly.** WSJT-X, JTDX, N1MM Logger+ and DXLog on the local network send UDP straight to the server. The public site cannot receive UDP from a home network and needs upstream's relay program running on the operator's computer.
+- **Every screen shares one layout.** Settings sync is on, so layout, panels and filters are stored on the server. The public site keeps them in each browser.
+- **Dashboard state is backed up.** Layout, spot history, station settings and account logins live on the `main` volume and are included in StartOS backups.
+- **Logins and station details stay on the server.** QRZ.com, HamQTH and Space-Track credentials, callsign and grid square are held by this server, not a third-party site. The public data feeds still see the server's IP address.
+- **Updates follow the package.** The instance changes only when a new package is installed, independent of the public site's deployments and uptime.
+
 ---
 
 ## Table of Contents
